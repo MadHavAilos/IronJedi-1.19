@@ -1,6 +1,9 @@
 package net.madhav.ironjedi;
 
 import com.mojang.logging.LogUtils;
+import net.madhav.ironjedi.block.ModBlocks;
+import net.madhav.ironjedi.item.ModItems;
+import net.madhav.ironjedi.world.feature.ModConfiguredFeatures;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,6 +22,11 @@ public class IronJedi {
 
     public IronJedi() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+        ModConfiguredFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

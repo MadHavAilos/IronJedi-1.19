@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ironjedi:kyber_block"
+    }
+  ],
+  "result": {
+    "item": "ironjedi:kyber_crystal",
+    "count": 9
+  }
+}

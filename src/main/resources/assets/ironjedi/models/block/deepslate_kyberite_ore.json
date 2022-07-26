@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ironjedi:block/deepslate_kyberite_ore"
+  }
+}
