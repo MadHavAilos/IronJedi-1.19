@@ -1,0 +1,52 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"lightsaber_on": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"override_previous_animation": true,
+			"bones": {
+				"bone": {
+					"scale": {
+						"0.0": {
+							"vector": [1, 0.3, 1]
+						},
+						"1.0": {
+							"vector": [1, 1, 1],
+							"easing": "easeInQuart"
+						}
+					}
+				}
+			}
+		},
+		"lightsaber_off": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"override_previous_animation": true,
+			"bones": {
+				"bone": {
+					"scale": {
+						"0.0": {
+							"vector": [1, 1, 1]
+						},
+						"1.0": {
+							"vector": [1, 0.3, 1],
+							"easing": "easeInQuad"
+						}
+					}
+				}
+			}
+		},
+		"lightsaber_idle_off": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"scale": {
+						"vector": [1, 0.3, 1]
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}
