@@ -37,7 +37,7 @@ public class LightsaberItem extends Item implements IAnimatable {
 
     public LightsaberItem(Properties properties) {
         super(properties);
-        this.attackDamage = 9f;
+        this.attackDamage = 13f;
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", (double)this.attackDamage, AttributeModifier.Operation.ADDITION));
         builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Weapon modifier", (double)1.0, AttributeModifier.Operation.ADDITION));
