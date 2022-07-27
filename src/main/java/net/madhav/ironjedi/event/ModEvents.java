@@ -12,13 +12,15 @@ public class ModEvents {
 
     @SubscribeEvent
     public void lightsaberAttack(LivingAttackEvent event) {
-        System.out.println("lightsaber attack event called");
+        System.out.println(event.getEntity().getMainHandItem().getItem());
         if (event.getEntity().getMainHandItem().getItem() == ModItems.LIGHTSABER.get()) {
             System.out.println("the item is a lightsaber");
             LightsaberItem item = (LightsaberItem) event.getEntity().getMainHandItem().getItem();
             if (!item.getActive()) {
                 System.out.println("the lightsaber is inactive, cancelling");
                 event.setCanceled(true);
+            } else {
+                System.out.println("the lightsaber is active, continuing");
             }
         }
     }

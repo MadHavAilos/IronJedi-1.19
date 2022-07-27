@@ -38,6 +38,7 @@ public class IronJedi {
         GeckoLib.initialize();
 
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(new ModEvents());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
