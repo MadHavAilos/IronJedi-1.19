@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.example.GeckoLibMod;
 import software.bernie.geckolib3.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -35,6 +36,7 @@ public class IronJedi {
 
         modEventBus.addListener(this::commonSetup);
 
+        GeckoLibMod.DISABLE_IN_DEV = true;
         GeckoLib.initialize();
 
         MinecraftForge.EVENT_BUS.register(this);
