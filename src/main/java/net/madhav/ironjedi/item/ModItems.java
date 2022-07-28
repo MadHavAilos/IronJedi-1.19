@@ -29,6 +29,9 @@ public class ModItems {
             () -> new JediCloakItem(ModArmorMaterials.CLOAK, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModCreativeModeTab.IRON_JEDI_TAB)));
 
+    public static final RegistryObject<Item> INFUSED_LEATHER = ITEMS.register("infused_leather",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.IRON_JEDI_TAB)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

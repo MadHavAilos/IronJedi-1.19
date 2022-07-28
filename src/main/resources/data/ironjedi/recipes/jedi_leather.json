@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#X "
+  ],
+  "key": {
+    "#": {
+      "item": "ironjedi:kyber_crystal"
+    },
+    "X": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "ironjedi:infused_leather"
+  }
+}

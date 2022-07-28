@@ -19,8 +19,6 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 import software.bernie.geckolib3.item.GeoArmorItem;
 
-import java.util.Map;
-
 public class JediCloakItem extends GeoArmorItem implements IAnimatable {
 
     private AnimationFactory factory = new AnimationFactory(this);
