@@ -2,6 +2,7 @@ package net.madhav.ironjedi;
 
 import com.mojang.logging.LogUtils;
 import net.madhav.ironjedi.block.ModBlocks;
+import net.madhav.ironjedi.enchantment.ModEnchantments;
 import net.madhav.ironjedi.event.ModEvents;
 import net.madhav.ironjedi.item.ModItems;
 import net.madhav.ironjedi.world.feature.ModConfiguredFeatures;
@@ -33,6 +34,8 @@ public class IronJedi {
 
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
+
+        ModEnchantments.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

@@ -32,15 +32,15 @@ public class ModEvents {
                     }
                 }
             }
-            // force smite
-            for (ItemStack armor : sourceEntity.getArmorSlots()) {
-                if (armor.getItem() == ModItems.JEDI_CLOAK.get()) {
-                    if (new Random().nextFloat() > 0.9f) { // 10% chance to smite the attacked entity
-                        EntityType.LIGHTNING_BOLT.spawn((ServerLevel) event.getEntity().level, null, null,
-                                event.getEntity().blockPosition(), MobSpawnType.TRIGGERED, true, true);
-                    }
-                }
-            }
+            // force smite -> now handled as a custom enchantment
+//            for (ItemStack armor : sourceEntity.getArmorSlots()) {
+//                if (armor.getItem() == ModItems.JEDI_CLOAK.get()) {
+//                    if (new Random().nextFloat() > 0.9f) { // 10% chance to smite the attacked entity
+//                        EntityType.LIGHTNING_BOLT.spawn((ServerLevel) event.getEntity().level, null, null,
+//                                event.getEntity().blockPosition(), MobSpawnType.TRIGGERED, true, true);
+//                    }
+//                }
+//            }
         }
     }
 
