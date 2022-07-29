@@ -19,7 +19,7 @@ modId="ironjedi" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
-version="0.0.1-1.19" #mandatory
+version="0.1.0-1.19" #mandatory
  # A display name for the mod
 displayName="Iron Jedi" #mandatory
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
@@ -42,11 +42,11 @@ authors="MadHav" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-This is a long form description of the mod. You can write whatever you want here
+This mod is designed to be a combination of the Star Wars Jedi and Marvel's Iron Man.
 
-Have some lorem ipsum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis lacinia magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed sagittis luctus odio eu tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque volutpat ligula eget lacus auctor sagittis. In hac habitasse platea dictumst. Nunc gravida elit vitae sem vehicula efficitur. Donec mattis ipsum et arcu lobortis, eleifend sagittis sem rutrum. Cras pharetra quam eget posuere fermentum. Sed id tincidunt justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Mine for your own Kyber Crystals, and make your own lightsaber, or craft some Jedi armor, which provides interesting effects to the wearer. Enchant this armor to give the wearer interesting abilities, as well.
+In the future, the abilities of Iron Man will be added as well. These will include the ability to fly and shoot repulsor beams.
+This project is purely for fun, but may one day end up as something I can be proud of, so if you are seeing this, I hope you enjoy!
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.ironjedi]] #optional
