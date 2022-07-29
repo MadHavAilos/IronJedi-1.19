@@ -5,6 +5,7 @@ import net.madhav.ironjedi.block.ModBlocks;
 import net.madhav.ironjedi.enchantment.ModEnchantments;
 import net.madhav.ironjedi.event.ModEvents;
 import net.madhav.ironjedi.item.ModItems;
+import net.madhav.ironjedi.sound.ModSounds;
 import net.madhav.ironjedi.world.feature.ModConfiguredFeatures;
 import net.madhav.ironjedi.world.feature.ModPlacedFeatures;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,6 +37,7 @@ public class IronJedi {
         ModPlacedFeatures.register(modEventBus);
 
         ModEnchantments.register(modEventBus);
+        ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

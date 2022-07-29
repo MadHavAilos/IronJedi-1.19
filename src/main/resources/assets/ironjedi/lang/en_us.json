@@ -11,5 +11,12 @@
 
   "enchantment.ironjedi.jedi_smite": "Jedi Smite",
 
+  "sounds.ironjedi.lightsaber_activate": "Lightsaber Activate",
+  "sounds.ironjedi.lightsaber_deactivate": "Lightsaber Deactivate",
+  "sounds.ironjedi.lightsaber_idle1": "Lightsaber Idle 1",
+  "sounds.ironjedi.lightsaber_idle2": "Lightsaber Idle 2",
+  "sounds.ironjedi.lightsaber_swing1": "Lightsaber Swing 1",
+  "sounds.ironjedi.lightsaber_swing2": "Lightsaber Swing 2",
+
   "itemGroup.ironjeditab": "Iron Jedi"
 }

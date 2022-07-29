@@ -1,0 +1,26 @@
+{
+  "lightsaber_activate": {
+    "subtitle": "sounds.ironjedi.lightsaber_activate",
+    "sounds": [
+      "ironjedi:lightsaber_activate"
+    ]
+  },
+  "lightsaber_deactivate": {
+    "subtitle": "sounds.ironjedi.lightsaber_deactivate",
+    "sounds": [
+      "ironjedi:lightsaber_deactivate"
+    ]
+  },
+  "lightsaber_swing1": {
+    "subtitle": "sounds.ironjedi.lightsaber_swing1",
+    "sounds": [
+      "ironjedi:lightsaber_swing1"
+    ]
+  },
+  "lightsaber_swing2": {
+    "subtitle": "sounds.ironjedi.lightsaber_swing2",
+    "sounds": [
+      "ironjedi:lightsaber_swing2"
+    ]
+  }
+}

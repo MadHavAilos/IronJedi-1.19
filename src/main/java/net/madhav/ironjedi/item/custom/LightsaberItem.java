@@ -3,9 +3,12 @@ package net.madhav.ironjedi.item.custom;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import net.madhav.ironjedi.item.client.LightsaberRenderer;
+import net.madhav.ironjedi.sound.ModSounds;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -24,6 +27,7 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
+import java.util.Random;
 import java.util.function.Consumer;
 
 public class LightsaberItem extends Item implements IAnimatable {
@@ -83,6 +87,13 @@ public class LightsaberItem extends Item implements IAnimatable {
         if (!level.isClientSide() && hand == InteractionHand.MAIN_HAND) {
             active = !active;
         }
+        if (active) {
+            level.playSound(player, player, ModSounds.LIGHTSABER_DEACTIVATE.get(),
+                    SoundSource.PLAYERS, 0.7f, 1f);
+        } else {
+            level.playSound(player, player, ModSounds.LIGHTSABER_ACTIVATE.get(),
+                    SoundSource.PLAYERS, 0.7f, 1f);
+        }
 
         return super.use(level, player, hand);
     }
@@ -90,6 +101,22 @@ public class LightsaberItem extends Item implements IAnimatable {
     @Override
     public AnimationFactory getFactory() {
         return this.factory;
+    }
+
+    @Override
+    public boolean onEntitySwing(ItemStack stack, LivingEntity entity) {
+        if (entity.getLevel().isClientSide() && getActive()) {
+            // Play a random swing sound
+            if (entity.level.random.nextFloat() > 0.5) {
+                entity.getLevel().playSound((Player) entity, entity.blockPosition(), ModSounds.LIGHTSABER_SWING1.get(),
+                        SoundSource.PLAYERS, 0.7f, 1f);
+            } else {
+                entity.getLevel().playSound((Player) entity, entity.blockPosition(), ModSounds.LIGHTSABER_SWING2.get(),
+                        SoundSource.PLAYERS, 0.7f, 1f);
+            }
+        }
+
+        return super.onEntitySwing(stack, entity);
     }
 
     public boolean hurtEnemy(ItemStack p_43278_, LivingEntity p_43279_, LivingEntity p_43280_) {
