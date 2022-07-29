@@ -3,8 +3,10 @@ package net.madhav.ironjedi.item.custom;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import net.madhav.ironjedi.item.client.LightsaberRenderer;
+import net.madhav.ironjedi.particle.ModParticles;
 import net.madhav.ironjedi.sound.ModSounds;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
+import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -17,6 +19,7 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.client.extensions.common.IClientItemExtensions;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -114,9 +117,24 @@ public class LightsaberItem extends Item implements IAnimatable {
                 entity.getLevel().playSound((Player) entity, entity.blockPosition(), ModSounds.LIGHTSABER_SWING2.get(),
                         SoundSource.PLAYERS, 0.7f, 1f);
             }
+            spawnAttackParticles((Player) entity);
         }
 
         return super.onEntitySwing(stack, entity);
+    }
+
+    private void spawnAttackParticles(Player player) {
+        for (int i = 0; i < 180; i+=10) {
+            double angle = Math.toRadians(i - player.getYRot() + 180);
+            float radius = 1.4f;
+
+            double dx = Math.cos(angle) * radius;
+            double dz = -Math.sin(angle) * radius;
+
+            player.getLevel().addParticle(ModParticles.LIGHTSABER_SWING_PARTICLES.get(),
+                    player.getX() + dx, player.getY() + 1.1f, player.getZ() + dz,
+                    0.0d, 0.0d, 0.0d);
+        }
     }
 
     public boolean hurtEnemy(ItemStack p_43278_, LivingEntity p_43279_, LivingEntity p_43280_) {
