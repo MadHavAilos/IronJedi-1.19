@@ -11,8 +11,10 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    CLOAK("cloak", 28, new int[]{1, 1, 1, 1}, 19, SoundEvents.ARMOR_EQUIP_LEATHER,
-            1.0f, 0.0f, () -> Ingredient.of(ModItems.INFUSED_LEATHER.get()));
+    CLOAK("cloak", 20, new int[]{0, 0, 2, 1}, 15, SoundEvents.ARMOR_EQUIP_LEATHER,
+            0.0f, 0.0f, () -> Ingredient.of(ModItems.INFUSED_LEATHER.get())),
+    IRON_GOLD("iron_gold", 28, new int[]{2, 5, 6, 2}, 19, SoundEvents.ARMOR_EQUIP_IRON,
+            1.0f, 0.0f, () -> Ingredient.of(ModItems.IRON_GOLD_ALLOY.get()));
 
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;

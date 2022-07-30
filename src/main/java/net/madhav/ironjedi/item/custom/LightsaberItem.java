@@ -131,9 +131,9 @@ public class LightsaberItem extends Item implements IAnimatable {
             double dx = Math.cos(angle) * radius;
             double dz = -Math.sin(angle) * radius;
 
-            player.getLevel().addParticle(ModParticles.LIGHTSABER_SWING_PARTICLES.get(),
-                    player.getX() + dx, player.getY() + 1.1f, player.getZ() + dz,
-                    0.0d, 0.0d, 0.0d);
+//            player.getLevel().addParticle(ModParticles.LIGHTSABER_SWING_PARTICLES.get(),
+//                    player.getX() + dx, player.getY() + 1.1f, player.getZ() + dz,
+//                    0.0d, 0.0d, 0.0d);
         }
     }
 
