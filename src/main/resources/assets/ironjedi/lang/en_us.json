@@ -23,5 +23,10 @@
   "sounds.ironjedi.lightsaber_swing1": "Lightsaber Swing 1",
   "sounds.ironjedi.lightsaber_swing2": "Lightsaber Swing 2",
 
+  "effect.ironjedi.fly": "Fly",
+
+  "key.category.ironjedi.ironjedi": "Iron Jedi",
+  "key.ironjedi.fly": "Fly",
+
   "itemGroup.ironjeditab": "Iron Jedi"
 }
