@@ -7,6 +7,9 @@ import net.madhav.ironjedi.item.custom.LightsaberItem;
 import net.madhav.ironjedi.sound.ModSounds;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobSpawnType;
@@ -42,7 +45,7 @@ public class ModEvents {
     }
 
     @SubscribeEvent
-    public void applyFly(LivingFallEvent event) {
+    public void cancelFlyFallDamage(LivingFallEvent event) {
         Entity sourceEntity = event.getEntity();
         if (sourceEntity instanceof Player) {
             if (((Player) sourceEntity).hasEffect(ModEffects.FLY.get())) {

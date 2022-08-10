@@ -13,10 +13,6 @@ public class FlyEffect extends MobEffect {
         super(mobEffectCategory, color);
     }
 
-    public void handlefly(Player player) {
-        player.setDeltaMovement(0.0, 1.0, 0.0);
-    }
-
     @Override
     public void applyEffectTick(LivingEntity livingEntity, int amplifier) {
         super.applyEffectTick(livingEntity, amplifier);
